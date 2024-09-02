@@ -1,0 +1,27 @@
+.converter {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+.converter__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 80%;
+    &  input, select {
+        width: 100%;
+        padding: 8px 16px;
+        margin-bottom: 16px;
+        height: 60px;
+        border-radius: 4px;
+        background-color: white;
+        color: #1a1a1a;
+        font-size: 20px;
+        border: 2px solid #00214a;
+    }
+}
