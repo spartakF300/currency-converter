@@ -37,16 +37,11 @@ export default defineComponent({
       }
 
       if (input === 'input1') {
-        !amount1.value && (amount1.value = 0);
-        amount2.value =
-            parseFloat((amount1.value * getCurrencyRate(currency1.value, currency2.value))
-            .toFixed(2));
-
+        const rate = getCurrencyRate(currency1.value, currency2.value);
+        amount2.value = parseFloat((amount1.value * rate).toFixed(2));
       } else {
-        !amount2.value && (amount2.value = 0);
-        amount1.value =
-            parseFloat((amount2.value / getCurrencyRate(currency1.value, currency2.value))
-            .toFixed(2));
+        const reverseRate = getCurrencyRate(currency2.value, currency1.value);
+        amount1.value = parseFloat((amount2.value * reverseRate).toFixed(2));
       }
     };
 
